@@ -49,7 +49,10 @@
 	#define _delay_ms(t) delay_ms(t)
 #elif defined(GLCD_DEVICE_PIC32MX)
 	/* Microchip PIC32MX -- work in progress */
-	
+	#include <stdint.h>
+	extern void delay_ms(uint32_t ms);
+	#define PROGMEM
+	#define _delay_ms(t) delay_ms(t)
 #else
 	#error "Device not supported"
 #endif

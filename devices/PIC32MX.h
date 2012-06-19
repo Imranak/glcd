@@ -26,9 +26,16 @@
 #ifndef PIC32MX_H_
 #define PIC32MX_H_
 
-#if defined(GLCD_DEVICE_LPC111X)
+#include <stdint.h>
 
+#if defined(GLCD_DEVICE_PIC32MX)
+
+/* Swap 2 integers around */
 #define swap(a, b) { uint8_t t = a; a = b; b = t; }
+
+/* Need to define these below for PIC32MX */
+#define GLCD_DC_LOW()
+#define GLCD_DC_HIGH()
 
 #endif /* GLCD_DEVICE_LPC111X */
 

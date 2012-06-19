@@ -39,7 +39,9 @@
 #if defined(GLCD_DEVICE_AVR8)
 	#include <avr/io.h>
 #elif defined(GLCD_DEVICE_LPC111X)
-	#include <LPC11xx.h>
+	#include "devices/LPC11xx.h"
+#elif defined(GLCD_DEVICE_PIC32MX)
+	#include "devices/PIC32MX.h"
 #else
 	#error "Device not supported"
 #endif
