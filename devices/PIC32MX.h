@@ -33,10 +33,17 @@
 /* Swap 2 integers around */
 #define swap(a, b) { uint8_t t = a; a = b; b = t; }
 
-/* Need to define these below for PIC32MX */
-#define GLCD_DC_LOW()
-#define GLCD_DC_HIGH()
+/* Define pin mappings */
+// ...
 
-#endif /* GLCD_DEVICE_LPC111X */
+/* Need to define these below for PIC32MX */
+#define GLCD_SELECT()     
+#define GLCD_DESELECT()   
+#define GLCD_DC_LOW()     
+#define GLCD_DC_HIGH()    
+#define GLCD_RESET_LOW()  
+#define GLCD_RESET_HIGH() 
+
+#endif /* GLCD_DEVICE_PIC32MX */
 
 #endif /* PIC32MX_H_ */
